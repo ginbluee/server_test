@@ -17,6 +17,8 @@ app.get('/', (req, res) => {
     }
 })
 
-app.listen(port,function(){
-    console.log("server is listening on port: ",port)
-})
+let server = require('http').Server(app);
+
+server.listen(port , () => {
+    console.log(`App listen on ${port}`);
+  })
